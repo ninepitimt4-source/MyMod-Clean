@@ -13,8 +13,9 @@ jobs:
 
     - name: Download AML Headers
       run: |
-        rm -rf aml
-        git clone https://github.com/RusJJ/AndroidModLoader.git aml
+        git clone https://github.com/RusJJ/AndroidModLoader.git temp_aml
+        cp -r temp_aml/mod .
+        rm -rf temp_aml
 
     - name: Setup Android NDK
       uses: nttld/setup-ndk@v1
@@ -33,3 +34,4 @@ jobs:
       with:
         name: MyFirstMod-32bit
         path: build/libMyFirstMod.so
+        
