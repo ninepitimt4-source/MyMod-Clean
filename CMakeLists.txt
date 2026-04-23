@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.4.1)
+project(MyFirstMod)
+set(CMAKE_CXX_STANDARD 11)
+include_directories(aml)
+add_library(MyFirstMod SHARED main.cpp)
