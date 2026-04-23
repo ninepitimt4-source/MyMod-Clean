@@ -11,11 +11,8 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Download AML Headers
-      run: |
-        git clone https://github.com/RusJJ/AndroidModLoader.git temp_aml
-        cp -r temp_aml/mod .
-        rm -rf temp_aml
+    - name: Download AML SDK
+      run: git clone https://github.com/RusJJ/AndroidModLoader.git aml_sdk
 
     - name: Setup Android NDK
       uses: nttld/setup-ndk@v1
